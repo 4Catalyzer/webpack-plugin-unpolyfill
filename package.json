@@ -46,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "@4c/rollout": "^1.2.0",
     "@4c/semantic-release-config": "^1.0.2",
     "babel-eslint": "^10.0.1",
     "eslint": "^4.0.0",
