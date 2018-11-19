@@ -3,12 +3,16 @@ const webpack = require('webpack');
 const escapeRegExp = require('lodash/escapeRegExp');
 
 const getReplacePlugin = module => {
-  const modPath = require.resolve(module);
-  const segment = escapeRegExp(modPath.slice(modPath.indexOf(module)));
-  return new webpack.NormalModuleReplacementPlugin(
-    new RegExp(segment, 'i'),
-    `${__dirname}/shims/${module}.js`,
-  );
+  try {
+    const modPath = require.resolve(module);
+    const segment = escapeRegExp(modPath.slice(modPath.indexOf(module)));
+    return new webpack.NormalModuleReplacementPlugin(
+      new RegExp(segment, 'i'),
+      `${__dirname}/shims/${module}.js`,
+    );
+  } catch (err) {
+    return { apply() {} };
+  }
 };
 
 class UnpolyfillPlugin {
