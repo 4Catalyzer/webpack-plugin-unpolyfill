@@ -25,14 +25,8 @@
     "trailingComma": "all"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "git add"
-    ],
-    "*.{json,css,md}": [
-      "prettier --write --ignore-path .eslintignore",
-      "git add"
-    ]
+    "*.js": "eslint --fix",
+    "*.{json,css,md}": "prettier --write --ignore-path .eslintignore"
   },
   "jest": {
     "roots": [
