@@ -13,8 +13,7 @@
     "test": "npm run lint",
     "testonly": "jest",
     "lint": "eslint . && prettier --list-different --ignore-path .eslintignore '**/*.{json,css,md}'",
-    "format": "eslint . --fix && prettier --write --ignore-path .eslintignore '**/*.{json,css,md}'",
-    "precommit": "lint-staged"
+    "format": "eslint . --fix && prettier --write --ignore-path .eslintignore '**/*.{json,css,md}'"
   },
   "publishConfig": {
     "access": "public"
@@ -23,6 +22,11 @@
     "printWidth": 79,
     "singleQuote": true,
     "trailingComma": "all"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.js": "eslint --fix",
