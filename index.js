@@ -1,6 +1,6 @@
+const escapeRegExp = require('lodash/escapeRegExp');
 const semver = require('semver');
 const webpack = require('webpack');
-const escapeRegExp = require('lodash/escapeRegExp');
 
 const getReplacePlugin = module => {
   try {
