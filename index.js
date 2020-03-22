@@ -2,7 +2,7 @@ const escapeRegExp = require('lodash/escapeRegExp');
 const semver = require('semver');
 const webpack = require('webpack');
 
-const getReplacePlugin = module => {
+const getReplacePlugin = (module) => {
   try {
     const modPath = require.resolve(module);
     const segment = escapeRegExp(modPath.slice(modPath.indexOf(module)));
