@@ -62,7 +62,7 @@
     "webpack": "^5.10.1"
   },
   "dependencies": {
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "semver": "^7.0.0"
   },
   "peerDependencies": {
