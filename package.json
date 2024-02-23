@@ -47,7 +47,7 @@
     "@4c/rollout": "^2.1.11",
     "@4c/semantic-release-config": "^2.0.14",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.15.0",
+    "eslint": "^8.57.0",
     "eslint-config-4catalyzer": "^1.1.5",
     "eslint-config-prettier": "^7.0.0",
     "eslint-plugin-import": "^2.22.1",
